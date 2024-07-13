@@ -1,0 +1,22 @@
+Cryptocurrency Exchange
+Project Proposal
+Introduction
+This source code of the Cryptocurrency Exchange has been written in C programming language without any graphics. The code is complete and error-free. The project "Cryptocurrency Exchange" is an application to automate converting the value of a certain amount of any 20 cryptocurrencies into US dollars and vice versa. The value of these currencies will be fixed to the values present on April 30, 2023.
+
+Objectives
+This project will serve the following objectives:
+
+Adopt a menu-based user interface that enables simple navigation and currency conversions for users.
+Create a function that converts a specific amount of each currency into US dollars using the fixed prices of each of the 20 cryptocurrencies as of April 30, 2023.
+Generate a function that converts a given number of US dollars into any of them using the 20 cryptocurrencies' fixed prices as of April 30, 2023.
+Create a text-based report that displays the user's transaction history and account balance after each currency conversion.
+Generate a function that converts a given number of US dollars into any of them using the 20 cryptocurrencies' fixed prices as of April 30, 2023.
+Features
+Real-time exchange rates: By updating the program to retrieve real-time cryptocurrency exchange rates from a reliable API, conversions would be based on the most precise and recent values.
+Support for several currencies: The program could include more than simply the 20 cryptocurrencies initially listed, enabling users to exchange funds between a broader range of currencies.
+Customizable date range: Instead of being restricted to the predetermined values on April 30, 2023, the program might be improved to allow users to choose the specific date range for which they want to make currency conversions.
+Monitoring and Evaluation
+The program enables the user to convert the values of cryptocurrencies into US Dollars, providing ease and convenience.
+
+Uses of the Program
+Management of cryptocurrency wallets: The program can be combined with cryptocurrency wallets to offer a quick and easy way to exchange between various currencies. Additionally, the value of a certain number of a specific cryptocurrency can be offered. If the user wants, the total of conversions can be saved until a program is run.
