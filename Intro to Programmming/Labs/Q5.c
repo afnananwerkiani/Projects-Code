@@ -1,24 +1,44 @@
 #include <stdio.h>
+#define MAX_SIZE 100
 int main() {
-    int marks1[5], marks2[5];
-    int i, j;
-    printf("Enter the marks of the first 5 students:\n");
-    for (i = 0; i < 5; i++) {
-        printf("Enter the mark for student %d: ", i+1);
-        scanf("%d", &marks1[i]);
+    int matrix[MAX_SIZE][MAX_SIZE];
+    int transpose[MAX_SIZE][MAX_SIZE];
+    int row, col, i, j, flag = 1;
+    printf("Enter the number of rows and columns of the matrix: ");
+    scanf("%d %d", &row, &col);
+    printf("Enter the elements of the matrix:\n");
+    for(i=0; i<row; i++) {
+        for(j=0; j<col; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
     }
-    printf("\nEnter the marks of the remaining 5 students:\n");
-    for (i = 0; i < 5; i++) {
-        printf("Enter the mark for student %d: ", i+6);
-        scanf("%d", &marks2[i]);
+        for(i=0; i<row; i++) {
+        for(j=0; j<col; j++) {
+            transpose[j][i] = matrix[i][j];
+        }
     }
-    printf("\nCommon numbers in both arrays: ");
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
-            if (marks1[i] == marks2[j]) {
-                printf("%d\n ", marks1[i]);
+        for(i=0; i<row; i++) {
+        for(j=0; j<col; j++) {
+            if(matrix[i][j] != transpose[i][j]) {
+                flag = 0;
+                break;
             }
         }
+        if(flag == 0) {
+            break;
+        }
+    	}
+        if(flag == 1) {
+        printf("Matrix is symmetric\n");
+        for(i=0; i<row; i++) {
+            for(j=0; j<col; j++) {
+                printf("%d ", matrix[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    else {
+        printf("Matrix is asymmetric\n");
     }
 }
 

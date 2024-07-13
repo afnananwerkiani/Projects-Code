@@ -1,23 +1,25 @@
 #include <stdio.h>
 int main() {
-    int size = 6;
-    int array[size];
-    int i, j;
-    int symmetric = 1;
-    printf("Enter %d integers:\n", size);
-    for (i = 0; i < size; i++) {
-        scanf("%d", &array[i]);
-    }
-    for (i = 0, j = size - 1; i < j; i++, j--) {
-        if (array[i] != array[j]) {
-            symmetric = 0;
-            break;
+    int rows, cols, i, j;
+    printf("Enter the number of rows and columns of the matrix: ");
+    scanf("%d %d", &rows, &cols);
+    int matrix[rows][cols];
+    int max = matrix[0][0];
+    printf("Enter the elements of the matrix:\n");
+    for(i=0; i<rows; i++) {
+        for(j=0; j<cols; j++) {
+            scanf("%d", &matrix[i][j]);
+            if(matrix[i][j] > max) {
+                max = matrix[i][j];
+            }
         }
     }
-    if (symmetric) {
-        printf("The array is symmetric.\n");
-    } else {
-        printf("The array is not symmetric.\n");
+    printf("Entered matrix:\n");
+    for(i=0; i<rows; i++) {
+        for(j=0; j<cols; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
     }
+    printf("Maximum element of the matrix is: %d\n", max);
 }
-

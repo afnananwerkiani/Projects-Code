@@ -1,29 +1,21 @@
 #include <stdio.h>
 int main() {
-    float numbers[5];
-    int i, j;
-    float temp;
-    numbers[0] = 3.14;
-    numbers[1] = 3.24;
-    numbers[2] = 3.34;
-    numbers[3] = 3.44;
-    numbers[4] = 3.54;
-    printf("The stored numbers are: ");
-    for (i = 0; i < 5; i++) {
-        printf("%.2f ", numbers[i]);
-    }
-    for (i = 0; i < 5; i++) {
-        for (j = i + 1; j < 6; j++) {
-            if (numbers[i] < numbers[j]) {
-                temp = numbers[i];
-                numbers[i] = numbers[j];
-                numbers[j] = temp;
+    int m, n, i, j, count = 0;
+    printf("Enter the number of rows and columns of the matrix:\n");
+    scanf("%d %d", &m, &n);
+    int matrix[m][n];
+    printf("Enter the elements of the matrix:\n");
+    for(i = 0; i < m; i++) {
+        for(j = 0; j < n; j++) {
+            scanf("%d", &matrix[i][j]);
+            if(matrix[i][j] == 0) {
+                count++;
             }
         }
     }
-    printf("\nThe sorted numbers in descending order are: ");
-    for (i = 0; i < 5; i++) {
-        printf("%.2f ", numbers[i]);
+    if(count >= ((m * n) / 2)) {
+        printf("The matrix is a sparse matrix.\n");
+    } else {
+        printf("The matrix is not a sparse matrix.\n");
     }
 }
-

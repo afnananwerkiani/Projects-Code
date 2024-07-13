@@ -1,25 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 int main() {
-    char num[20];
-    int total;
-    int i, j;
-    
-    do {
-        printf("Enter a number greater than or equal to four digits: ");
-        scanf("%s", num);
-    } while (strlen(num) < 4);
-    
-    while (strlen(num) > 1) {
-        total = 0;
-        for (i = 0; i < strlen(num); i++) {
-            total += num[i] - '0'; 
-        }
-        sprintf(num, "%d", total); 
-    }
-    
-    printf("The final sum is: %s", num);
-    
-    return 0;
+    char first_name[50];
+    char last_name[50];
+    char full_name[100];
+    printf("Enter your first name: ");
+    scanf("%s", first_name);
+    printf("Enter your last name: ");
+    scanf("%s", last_name);
+    strcpy(full_name, first_name);
+    strcat(full_name, " ");
+    strcat(full_name, last_name);
+    printf("Full name: %s\n", full_name);
+    printf("Character count: %d\n", strlen(full_name));
 }
 
