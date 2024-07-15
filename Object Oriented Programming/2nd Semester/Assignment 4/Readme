@@ -1,0 +1,60 @@
+Assignment Goal
+The purpose of this assignment is to apply whatever we have learned throughout the course and applying it to
+one complete package in the form of your very own paint program. If you have been doing good programming so
+far, it will be great time to creating your github account and saving your project online. This is something you
+must make a habit of irrespective of course or assignment. Always back it up online. This tutorial is mainly for
+using github desktop for unity, but you can follow it to do it for any project. Best would be to learn to use
+github with command line interface. This is the best way to keep backups and you should make it a habit to use
+it. Any excuse about losing data due to PC crash will not be accepted.
+You can access Java Documentation at this link.
+For all the graphics, you will need to read the Java Documentation at this link.
+2 The Task
+In this assignment youwill be completing the entire project whose groundwork you did in the previous assignment.
+You will be doing the following tasks:
+• You will create your own save functionality or by using Object Serialization to save the state of objects.
+This topic will be covered in the coming weeks.
+• Undo and Redo will only work on the currently selected layer
+• You will use the Singleton Design Pattern to create the Gradient Window
+• You will use the Singleton Design pattern to create a Tooltip (more on that later)
+• You will implement all the shapes
+• You will implement the free drawing functionality with changing stroke length
+• You will use a Singleton Design Pattern to create a Grid
+• Every shape will be drawn with the selected stroke color as outline and fill color
+• The stroke size will also work for the outline of the shapes that are drawn
+• Complete functionality of all the items
+2.1 Tooltip
+You will create a Tooltip which will give relevant information about all the items in your application. For
+example, showing RGB value on color buttons, shortcuts on File menus, Shape names on shape buttons etc.
+This can easily be done using Interfaces.
+2
+Figure 1: Tooltip
+2.2 Free Drawing
+You can create free drawing by clicking and dragging on the screen. You can do this by drawing circles of unit
+radius or of a selected stroke width as radius. All the drawn circles will go in an arraylist in a Free Drawing
+Object that will inherit from Shape Abstract class.
+2.3 Grid and Grid Button
+You will create one more button, Grid Button. Clicking on which you will change the size of the grid from the
+default ”OFF” state to 2, 4, 8, 16, 32 and 64 pixel size and then back to ”OFF”. The size is the size of the
+square side of which the entire grid will be made. Thus you will be able to see a grid on top of your drawing.
+The grid can be of any color but is normally made of dark-gray value
+Figure 2: Grid Button
+2.4 Layers
+Layers will be active now. You will always draw on the top-most layer. The shapes will overlap each other based
+on their position in the layers. Removing a layer will remove all the objects inside that layer. The last remaining
+layer cannot be removed.
+3 Submission
+The deadline of the assignment is 8th of May at 11:55 pm. There will be no extensions and no late submissions
+will be accepted. You should complete the assignment at least a day before the submission deadline.
+You will zip the source folder and name it as your name ERP.zip. Suppose your name is John Doe and your
+ERP is 12345, then the name of your file should be John Doe 12345.zip. You will then upload it to LMS before
+the deadline.
+• If you upload the wrong file, you will not get any marks.
+• If at the last moment LMS does not work, you will not get marks. LMS tends to fail at the last moment
+as everyone is uploading files. The load makes it crash so avoid uploading the files at the last moment. If
+you choose to take that risk, then it will be your choice.
+• Do not email me your assignments or upload them to dropbox, they will not be checked
+• If the size of the files is too big, you are uploading files that are not required so remove those files from the
+zip file and then upload them.
+• If your files are not in a zip file, they will not be checked.
+Keep in mind that any attempt at plagiarism or collusion will cause you to automatically fail the
+course, hence write your own code
